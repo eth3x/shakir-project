@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo-section">
-        <img src="/path/to/logo.png" alt="Logo" className="logo" />
+        <img src="https://kaspa.org/wp-content/uploads/2023/08/Kaspa-LDSP-Dark-Full-Color.svg" alt="Logo" className="logo" />
       </div>
       <div className="links-section">
         <ul className="nav-menu">
@@ -31,3 +31,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
