@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo-section">
-        <img  src={Logo} alt="Logo" className="logo" />
+        <img src={Logo} alt="Logo" className="logo" />
       </div>
       <div className={`links-section ${showNavLinks ? "show" : ""}`}>
         <ul className="nav-menu">
@@ -33,14 +33,21 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-link">
-              Contact
+            <Link to="/work" className="nav-link">
+              Work
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/technologies" className="nav-link">
+              Technologies
             </Link>
           </li>
         </ul>
       </div>
       <div className="button-section">
-        <button className="cta-button">Get Started</button>
+        <Link to="/contact">
+          <button className="cta-button">Contact Us</button>
+        </Link>
       </div>
       <button className="hamburger-menu" onClick={toggleNavLinks}>
         &#9776;

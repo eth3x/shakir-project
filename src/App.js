@@ -1,5 +1,10 @@
 import Navbar from "./Components/Navbar";
 import { Routes, Route } from "react-router-dom";
+import { Projects } from "./Pages/Projects";
+import { Technologies } from "./Pages/Technologies";
+import { Contact } from "./Pages/Contact";
+import { Services } from "./Pages/Services";
+import { About } from "./Pages/About";
 
 function App() {
   return (
@@ -7,10 +12,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="./" element={<Navbar />} />
-        <Route path="./about" element={<Navbar />} />
-        <Route path="./services" element={<Navbar />} />
-        <Route path="./contact" element={<Navbar />} />
+        <Route path="./about" element={<About />} />
+        <Route path="./services" element={<Services />} />
+        <Route path="./technologies" element={<Technologies />} />
+        <Route path="./projects" element={<Projects />} />
+        <Route path="./contact" element={<Contact />} />
       </Routes>
+
     </div>
   );
 }
