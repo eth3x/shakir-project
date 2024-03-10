@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export const About = () => {
-  return (
-    <div style={{color:"black"}}>About</div>
-  )
-}
+const About = () => {
+  return <div>About Page</div>;
+};
+
+export default About;

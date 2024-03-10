@@ -1,122 +1,104 @@
 /* Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
 
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 20px;
+  font-weight: bold;
+  padding: 0px 5px;
+}
+
+.nav-item a:hover {
+  color: #3addbe;
+}
+
+.hamburger-menu {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logo-section img {
+  height: 70px;
+}
+
+@media screen and (max-width: 767px) {
+  .hamburger-menu {
+    display: block;
   }
-  
-  /* .logo-section {
-    flex: 1; 
+
+  .logo-section img {
+    height: 30px;
   }
-  
+
   .links-section {
-    flex: 1; 
-  } */
-  
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    z-index: 1;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 25px;
+  }
+
+  .button-section {
+    display: none;
+  }
+  .nav-item a:hover {
+    color: #3addbe;
+  }
+
+  .links-section.show {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
   .nav-menu {
+    flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
-  
-  .nav-item {
-    margin-right: 20px;
-    font-weight: bold;
-    padding: 0px 5px;
-  }
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
 
+/* Style for button */
+.button-section button {
+  background-color: #3addbe; /* You can change the background color */
+  color: #fff; /* You can change the text color */
+  padding: 10px 20px; /* You can adjust the padding */
+  border: none;
+  border-radius: 5px; /* You can adjust the border radius */
+  cursor: pointer;
+}
 
-
-  .nav-item a:hover {
-  color: #3addbe;
-
-  }
-
-  
-  .hamburger-menu {
-    display: none; 
-    border: none;
-    background: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .logo-section img {
-    height: 70px;
-  }
-  
-  @media screen and (max-width: 767px) {
-    .hamburger-menu {
-      display: block;
-    }
-  
-    .logo-section img {
-      height: 30px;
-    }
-  
-    .links-section {
-      display: none; 
-      position: absolute;
-      top: 70px; 
-      left: 0;
-      right: 0;
-      background-color: #f9f9f9;
-      z-index: 1;
-      flex-direction: column;
-      align-items: left;
-      padding-left:25px ;
-
-    }
-  
-    .button-section {
-      display: none;
-    }
-    .nav-item a:hover {
-        color: #3addbe;
-      
-        }
-  
-    .links-section.show {
-      display: flex; 
-    }
-  
-    .nav-item {
-      margin: 10px 0;
-    }
-  
-    .nav-menu {
-      flex-direction: column;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: left;
-    }
-  }
-  
-  /* Style for nav links */
-  .nav-menu a {
-    text-decoration: none;
-    color: #333; /* You can change the color */
-    font-size: 16px; /* You can adjust the font size */
-  }
-  
-  /* Style for button */
-  .button-section button {
-    background-color: #3addbe ; /* You can change the background color */
-    color: #fff; /* You can change the text color */
-    padding: 10px 20px; /* You can adjust the padding */
-    border: none;
-    border-radius: 5px; /* You can adjust the border radius */
-    cursor: pointer;
-  }
-  
-  /* Style for button on hover */
-  .button-section button:hover {
-    background-color: #32caaf; /* You can change the background color on hover */
-  }
-  
+/* Style for button on hover */
+.button-section button:hover {
+  background-color: #32caaf; /* You can change the background color on hover */
+}

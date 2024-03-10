@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export const Technologies = () => {
-  return (
-    <div>Technologies</div>
-  )
-}
+const Technologies = () => {
+  return <div>Technologies Page</div>;
+};
+
+export default Technologies;
