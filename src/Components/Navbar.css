@@ -1,65 +1,105 @@
-/* /* Navbar.css */
+/* Navbar.css */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.logo-section {
-  flex: 1; /* Allow logo to grow and shrink */
-}
-
-.links-section {
-  flex: 2; /* Allow links section to grow and shrink */
-}
-
-.nav-menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-item {
-  margin-right: 20px;
-}
-
-.button-section {
-  flex: 1; /* Allow button section to grow and shrink */
-}
-
-.hamburger-menu {
-  display: none; /* Initially hide hamburger menu */
-  border: none;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 767px) {
-  .hamburger-menu {
-    display: block; /* Show hamburger menu on small screens */
-  }
-
-  .links-section {
-    display: none; /* Initially hide nav links on small screens */
-    position: absolute;
-    top: 60px; /* Adjust top position as needed */
-    left: 0;
-    right: 0;
-    background-color: #f9f9f9;
-    z-index: 1;
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
   }
-
-  .links-section.show {
-    display: flex; /* Show nav links when hamburger menu is clicked */
+  
+  .logo-section {
+    flex: 1; 
   }
-
+  
+  .links-section {
+    flex: 2; 
+  }
+  
+  .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
   .nav-item {
-    margin: 10px 0;
+    margin-right: 20px;
   }
-}
+  
+  .hamburger-menu {
+    display: none; 
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .logo-section img {
+    height: 70px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .hamburger-menu {
+      display: block;
+    }
+  
+    .logo-section img {
+      height: 30px;
+    }
+  
+    .links-section {
+      display: none; 
+      position: absolute;
+      top: 70px; 
+      left: 0;
+      right: 0;
+      background-color: #f9f9f9;
+      z-index: 1;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .button-section {
+      display: none;
+    }
+  
+    .links-section.show {
+      display: flex; 
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: left;
+    }
+  }
+  
+  /* Style for nav links */
+  .nav-menu a {
+    text-decoration: none;
+    color: #333; /* You can change the color */
+    font-size: 16px; /* You can adjust the font size */
+  }
+  
+  /* Style for button */
+  .button-section button {
+    background-color: #007bff; /* You can change the background color */
+    color: #fff; /* You can change the text color */
+    padding: 10px 20px; /* You can adjust the padding */
+    border: none;
+    border-radius: 5px; /* You can adjust the border radius */
+    cursor: pointer;
+  }
+  
+  /* Style for button on hover */
+  .button-section button:hover {
+    background-color: #0056b3; /* You can change the background color on hover */
+  }
+  

@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo-section">
-        <img src={Logo} alt="Logo" className="logo" />
+        <img  src={Logo} alt="Logo" className="logo" />
       </div>
       <div className={`links-section ${showNavLinks ? "show" : ""}`}>
         <ul className="nav-menu">
