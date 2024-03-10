@@ -1,34 +1,52 @@
-import React from 'react';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../Assets/Kaspa-LDSP-Dark-Full-Color.svg";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [showNavLinks, setShowNavLinks] = useState(false);
+
+  const toggleNavLinks = () => {
+    setShowNavLinks(!showNavLinks);
+  };
+
   return (
     <nav className="navbar">
       <div className="logo-section">
-        <img src="https://kaspa.org/wp-content/uploads/2023/08/Kaspa-LDSP-Dark-Full-Color.svg" alt="Logo" className="logo" />
+        <img src={Logo} alt="Logo" className="logo" />
       </div>
-      <div className="links-section">
+      <div className={`links-section ${showNavLinks ? "show" : ""}`}>
         <ul className="nav-menu">
           <li className="nav-item">
-            <a href="#" className="nav-link">Home</a>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">About</a>
+            <Link to="/about" className="nav-link">
+              About
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">Services</a>
+            <Link to="/services" className="nav-link">
+              Services
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">Contact</a>
+            <Link to="/contact" className="nav-link">
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
       <div className="button-section">
         <button className="cta-button">Get Started</button>
       </div>
+      <button className="hamburger-menu" onClick={toggleNavLinks}>
+        &#9776;
+      </button>
     </nav>
   );
 };
 
 export default Navbar;
-
